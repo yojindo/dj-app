@@ -1,29 +1,29 @@
 import styles from './index.module.css';
-import questionLogo from './assets/question.png';
+import djLogo from './assets/record.png';
 
 import { useState } from 'react';
 
 function App() {
-  const [questionDescription, setQuestionDescription] = useState('');
+  const [song, setSong] = useState('');
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('form submitted', questionDescription);
+    console.log('form submitted', song);
   };
 
   return (
     <main className={styles.main}>
-      <img src={questionLogo} alt="lightbulb" className={styles.icon} />
-      <h3>Generate Questions with AI</h3>
+      <img src={djLogo} alt="vinyl" className={styles.icon} />
+      <h3>Generate songs with AI</h3>
 
       <form onSubmit={onSubmit}>
         <input
           type="text"
           name="query-description"
-          placeholder="Ask your question"
-          onChange={(e) => setQuestionDescription(e.target.value)}
+          placeholder="song title and artist"
+          onChange={(e) => setSong(e.target.value)}
         />
-        <input type="submit" value="Generate questions" />
+        <input type="submit" value="song" />
       </form>
     </main>
   );
