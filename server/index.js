@@ -16,7 +16,7 @@ app.post('/generate', async (req, res) => {
   const song = req.body.song;
   try {
     const songSearch = await generate(song);
-    res.json({ songSearch });
+    res.json({ response: songSearch });
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
