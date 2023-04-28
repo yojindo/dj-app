@@ -16,6 +16,7 @@
 :root {
   --clr-neon: hsl(317 100% 54%);
   --clr-bg: hsl(323 21% 16%);
+  height: 100vh;
 }
 body {
   background: var(--clr-bg);
